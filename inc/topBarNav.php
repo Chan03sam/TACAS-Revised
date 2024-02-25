@@ -181,7 +181,7 @@ $user_type = ($_settings->userdata('user_type'));
               <?php endif; ?>
               <?php if($_settings->userdata('id') > 0): ?>
               <li class="nav-item dropdown">
-                <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle  <?= isset($page) && $page =='projects_per_curriculum' ? "active" : "" ?>" style="color: black; font-weight: 500;">Courses</a>
+                <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle  <?= isset($page) && $page =='projects_per_curriculum' ? "active" : "" ?>" style="color: black; font-weight: 500;">Program</a>
                 <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow" style="left: 0px; right: inherit;">
                   <?php 
                     $curriculums = $conn->query("SELECT * FROM curriculum_list where status = 1 order by `name` asc");
