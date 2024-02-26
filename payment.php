@@ -87,8 +87,8 @@
                     <span class="text-navy"><small>Payment Method</small></span>
                     <select id="payment_method" name="payment_method"  class="form-control form-control-border select2" data-placeholder="Select Payment Method" required>
                       <option value="" disabled selected>Select Payment Method</option>
-                      <option value="GCash">Onsite</option>
-                      <option value="Paypal">Gcash</option>
+                      <option value="Onsite">Onsite</option>
+                      <option value="Gcash">Gcash</option>
                       <option value="Maya">Maya</option>
                     </select>
                   </div>

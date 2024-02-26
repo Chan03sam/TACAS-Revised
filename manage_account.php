@@ -55,7 +55,7 @@ foreach ($user_data as $k => $v) {
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <!--<div class="row">
                         <div class="form-group col-auto">
                         <label for="" class="control-label text-navy">Gender</label>
                         </div>
@@ -71,7 +71,7 @@ foreach ($user_data as $k => $v) {
                                 <label for="genderFemale" class="custom-control-label">Female</label>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     
                     <div class="row">
                         <div class="col-lg-6">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2024 at 04:43 PM
+-- Generation Time: Feb 26, 2024 at 01:16 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -37,7 +37,7 @@ CREATE TABLE `archive_list` (
   `members` text NOT NULL,
   `banner_path` text NOT NULL,
   `document_path` text NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT 0,
+  `status` tinyint(1) NOT NULL DEFAULT 1,
   `student_id` int(30) DEFAULT NULL,
   `date_created` datetime NOT NULL DEFAULT current_timestamp(),
   `date_updated` datetime DEFAULT NULL ON UPDATE current_timestamp(),
@@ -50,10 +50,15 @@ CREATE TABLE `archive_list` (
 
 INSERT INTO `archive_list` (`id`, `archive_code`, `curriculum_id`, `year`, `title`, `abstract`, `members`, `banner_path`, `document_path`, `status`, `student_id`, `date_created`, `date_updated`, `views_count`) VALUES
 (4, '2024010001', 14, 2024, 'Example', '&lt;p&gt;Example&lt;/p&gt;', '&lt;p&gt;Example&lt;/p&gt;', 'uploads/banners/archive-4.png?v=1706539369', 'uploads/pdf/archive-4.pdf?v=1706539369', 1, NULL, '2024-01-29 22:42:48', '2024-02-14 23:01:35', 8),
-(6, '2024010002', 14, 2024, 'Impact of Socio-Economic Status on the Academic Performance', '&lt;p&gt;&lt;span style=&quot;font-family: S&ouml;hne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; white-space-collapse: preserve;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;This study examines the correlation between socio-economic status (SES) and academic performance, focusing on how the economic and social background of students influences their educational outcomes. It investigates the potential impact of various socio-economic factors, such as family income, parental education, and access to resources, on students\' academic achievements. By analyzing the relationship between SES and academic performance, the research aims to provide insights into the disparities in educational outcomes and shed light on potential areas for intervention and support to ensure equitable access to quality education for all students. The findings may contribute to educational policy development and implementation of targeted interventions to address socio-economic disparities in academic performance.&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;Author:&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;span style=&quot;font-size: 1rem;&quot;&gt;Samonte, Christian A.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'uploads/banners/archive-6.png?v=1706661798', 'uploads/pdf/archive-6.pdf?v=1706661798', 1, 9, '2024-01-31 08:43:15', '2024-02-14 23:06:17', 51),
+(6, '2024010002', 14, 2024, 'Impact of Socio-Economic Status on the Academic Performance', '&lt;p&gt;&lt;span style=&quot;font-family: S&ouml;hne, ui-sans-serif, system-ui, -apple-system, &amp;quot;Segoe UI&amp;quot;, Roboto, Ubuntu, Cantarell, &amp;quot;Noto Sans&amp;quot;, sans-serif, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; white-space-collapse: preserve;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;This study examines the correlation between socio-economic status (SES) and academic performance, focusing on how the economic and social background of students influences their educational outcomes. It investigates the potential impact of various socio-economic factors, such as family income, parental education, and access to resources, on students\' academic achievements. By analyzing the relationship between SES and academic performance, the research aims to provide insights into the disparities in educational outcomes and shed light on potential areas for intervention and support to ensure equitable access to quality education for all students. The findings may contribute to educational policy development and implementation of targeted interventions to address socio-economic disparities in academic performance.&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;Author:&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;span style=&quot;font-size: 1rem;&quot;&gt;Samonte, Christian A.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'uploads/banners/archive-6.png?v=1706661798', 'uploads/pdf/archive-6.pdf?v=1706661798', 1, 9, '2024-01-31 08:43:15', '2024-02-25 20:20:25', 54),
 (27, 'sadasdadas', 17, 0000, 'asdasdas', '&lt;p&gt;asdas&lt;/p&gt;', '&lt;p&gt;asdasd&lt;/p&gt;', 'uploads/banners/archive-27.png?v=1707575825', 'uploads/pdf/archive-27.pdf?v=1707575825', 1, NULL, '2024-02-10 22:37:05', '2024-02-10 22:37:53', 2),
 (28, 'Test10', 13, 0000, 'Test10', '&lt;p&gt;sadasdasd&lt;/p&gt;', '&lt;p&gt;asdasdsad&lt;/p&gt;', 'uploads/banners/archive-28.png?v=1707668903', 'uploads/pdf/archive-28.pdf?v=1707668903', 1, NULL, '2024-02-12 00:28:22', '2024-02-12 00:31:24', 2),
-(29, 'Test12', 20, 2024, 'Test12', '&lt;p&gt;asdasdsa&lt;/p&gt;', '&lt;p&gt;asdasdas&lt;/p&gt;', 'uploads/banners/archive-29.png?v=1707670027', 'uploads/pdf/archive-29.pdf?v=1707670027', 1, NULL, '2024-02-12 00:47:07', '2024-02-12 00:47:46', 2);
+(29, 'Test12', 20, 2024, 'Test12', '&lt;p&gt;asdasdsa&lt;/p&gt;', '&lt;p&gt;asdasdas&lt;/p&gt;', 'uploads/banners/archive-29.png?v=1707670027', 'uploads/pdf/archive-29.pdf?v=1707670027', 1, NULL, '2024-02-12 00:47:07', '2024-02-12 00:47:46', 2),
+(31, '12312312', 14, 2024, 'Testing1', '&lt;p&gt;asdasdsa&lt;/p&gt;', '&lt;p&gt;asdasdasdas&lt;/p&gt;', 'uploads/banners/archive-31.png?v=1708858564', 'uploads/pdf/archive-31.pdf?v=1708858564', 1, NULL, '2024-02-25 18:56:03', '2024-02-25 18:56:04', 1),
+(32, '244632132', 14, 2024, 'Testing inside Admin', '&lt;p&gt;Testing inside Admin&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;Testing inside Admin&lt;br&gt;&lt;/p&gt;', 'uploads/banners/archive-32.png?v=1708859937', 'uploads/pdf/archive-32.pdf?v=1708859937', 1, NULL, '2024-02-25 19:18:56', '2024-02-25 19:18:57', 0),
+(33, '1247546435', 18, 2024, 'Testing inside Admin2', '&lt;p&gt;Testing inside Admin2&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;Testing inside Admin2&lt;br&gt;&lt;/p&gt;', 'uploads/banners/archive-33.png?v=1708860030', 'uploads/pdf/archive-33.pdf?v=1708860030', 1, NULL, '2024-02-25 19:20:29', '2024-02-25 19:20:30', 0),
+(34, '746813212313', 20, 2024, 'Testing inside Admin3', '&lt;p&gt;Testing inside Admin3&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;Testing inside Admin3&lt;br&gt;&lt;/p&gt;', 'uploads/banners/archive-34.png?v=1708860061', 'uploads/pdf/archive-34.pdf?v=1708860061', 1, NULL, '2024-02-25 19:21:01', '2024-02-25 19:21:01', 0),
+(35, '746813212313', 13, 2024, 'Testing inside Admin4', '&lt;p&gt;Testing 4&lt;/p&gt;', '&lt;p&gt;Testing 4&lt;br&gt;&lt;/p&gt;', 'uploads/banners/archive-35.png?v=1708947222', 'uploads/pdf/archive-35.pdf?v=1708947222', 1, NULL, '2024-02-26 19:33:41', '2024-02-26 19:33:42', 0);
 
 -- --------------------------------------------------------
 
@@ -135,16 +140,19 @@ CREATE TABLE `outsiders_list` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `time_start` time DEFAULT '00:00:00',
   `time_expiration` time DEFAULT '00:00:00',
-  `elapsed_time` time DEFAULT '00:00:00'
+  `elapsed_time` time DEFAULT '00:00:00',
+  `department_id` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `outsiders_list`
 --
 
-INSERT INTO `outsiders_list` (`id`, `duration`, `firstname`, `middlename`, `lastname`, `gender`, `user_type`, `email`, `password`, `avatar`, `status`, `created_at`, `updated_at`, `time_start`, `time_expiration`, `elapsed_time`) VALUES
-(43, 2, 'Christian', 'Amistoso', 'Samonte', 'Male', 'outsider', 'samontechristian120300@gmail.com', '7bbeb82f3733123b3758d0f25078e3fc', 'uploads/outsiders/outsider-43.png?v=1707668002', 1, '2024-01-30 12:54:23', '2024-02-12 11:14:25', '00:00:00', '06:30:00', '00:00:00'),
-(44, 0, 'Christian', 'Amistoso', 'Samonte', 'Male', 'outsider', '120300@gmail.com', '7bbeb82f3733123b3758d0f25078e3fc', NULL, 0, '2024-02-09 14:57:48', '2024-02-09 14:57:48', '00:00:00', '00:00:00', '00:00:00');
+INSERT INTO `outsiders_list` (`id`, `duration`, `firstname`, `middlename`, `lastname`, `gender`, `user_type`, `email`, `password`, `avatar`, `status`, `created_at`, `updated_at`, `time_start`, `time_expiration`, `elapsed_time`, `department_id`) VALUES
+(43, 2, 'Christian', 'Amistoso', 'Samonte', 'Male', 'outsider', 'samontechristian120300@gmail.com', '7bbeb82f3733123b3758d0f25078e3fc', 'uploads/outsiders/outsider-43.png?v=1707668002', 1, '2024-01-30 12:54:23', '2024-02-12 11:14:25', '00:00:00', '06:30:00', '00:00:00', NULL),
+(44, 0, 'Christian', 'Amistoso', 'Samonte', 'Male', 'outsider', '120300@gmail.com', '7bbeb82f3733123b3758d0f25078e3fc', NULL, 0, '2024-02-09 14:57:48', '2024-02-09 14:57:48', '00:00:00', '00:00:00', '00:00:00', NULL),
+(45, 0, 'Christian', 'Amistoso', 'Samonte', 'Male', 'outsider', 'sam@gmail.com', '7bbeb82f3733123b3758d0f25078e3fc', NULL, 1, '2024-02-25 11:27:51', '2024-02-25 11:28:26', '00:00:00', '00:00:00', '00:00:00', '7'),
+(46, 0, 'Christian', 'Amistoso', 'Samonte', 'Male', 'outsider', 'samonte@gmail.com', '7bbeb82f3733123b3758d0f25078e3fc', NULL, 0, '2024-02-25 11:43:13', '2024-02-25 11:43:13', '00:00:00', '00:00:00', '00:00:00', '7');
 
 -- --------------------------------------------------------
 
@@ -202,8 +210,7 @@ CREATE TABLE `student_list` (
 --
 
 INSERT INTO `student_list` (`id`, `firstname`, `middlename`, `lastname`, `department_id`, `curriculum_id`, `email`, `user_type`, `password`, `gender`, `status`, `avatar`, `date_created`, `date_updated`, `type`) VALUES
-(9, 'Christian', 'Amistoso', 'Samonte', 8, 14, '1-200101@asiatech.edu.ph', 'student', '7bbeb82f3733123b3758d0f25078e3fc', 'Male', 1, 'uploads/students/student-9.png?v=1707564552', '2024-01-30 10:39:41', '2024-02-10 19:29:12', 1),
-(20, 'christy', 'Amistoso', 'Samonte', 8, 14, '120300@asiatech.edu.ph', 'student', '7bbeb82f3733123b3758d0f25078e3fc', 'Male', 0, '', '2024-02-09 23:01:41', NULL, 1);
+(9, 'Christian', 'Amistoso', 'Samonte', 8, 14, '1-200101@asiatech.edu.ph', 'student', '7bbeb82f3733123b3758d0f25078e3fc', 'Male', 1, 'uploads/students/student-9.png?v=1707564552', '2024-01-30 10:39:41', '2024-02-10 19:29:12', 1);
 
 -- --------------------------------------------------------
 
@@ -224,9 +231,9 @@ CREATE TABLE `system_info` (
 INSERT INTO `system_info` (`id`, `meta_field`, `meta_value`) VALUES
 (1, 'name', 'Thesis And Capstone Archiving System'),
 (6, 'short_name', 'TACAS'),
-(11, 'logo', 'uploads/logo-1706583019.png'),
+(11, 'logo', 'uploads/logo-1708840498.png'),
 (13, 'user_avatar', 'uploads/user_avatar.jpg'),
-(14, 'cover', 'uploads/cover-1706582690.png'),
+(14, 'cover', 'uploads/cover-1708840486.png'),
 (15, 'content', 'Array'),
 (16, 'email', 'info@asiatech.edu.ph'),
 (17, 'contact', ' 0955 438 1956'),
@@ -260,11 +267,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `middlename`, `lastname`, `username`, `password`, `avatar`, `last_login`, `type`, `status`, `date_added`, `date_updated`) VALUES
-(1, 'Admin', NULL, 'Samonte', 'admin', '0192023a7bbd73250516f069df18b500', 'uploads/admins/admin-1.png?v=1707465169', NULL, 2, 1, '2021-01-20 14:02:37', '2024-02-09 15:52:49'),
-(3, 'Admin', NULL, 'Juswa', 'juswa', '0192023a7bbd73250516f069df18b500', 'uploads/avatar-3.png?v=1706694611', NULL, 2, 1, '2024-01-31 17:50:11', '2024-01-31 17:50:11'),
-(4, 'Admin', NULL, 'Anne', 'Anne', '0192023a7bbd73250516f069df18b500', 'uploads/avatar-4.png?v=1706694671', NULL, 2, 1, '2024-01-31 17:51:11', '2024-01-31 17:51:11'),
-(5, 'Admin', NULL, 'Jade', 'Jade', '0192023a7bbd73250516f069df18b500', 'uploads/avatar-5.png?v=1706694688', NULL, 2, 1, '2024-01-31 17:51:28', '2024-01-31 17:51:28'),
-(7, 'Admin', NULL, 'Pablo', 'Pablo', '0192023a7bbd73250516f069df18b500', 'uploads/avatar-7.png?v=1706694782', NULL, 2, 1, '2024-01-31 17:53:02', '2024-01-31 17:53:02');
+(1, 'Admin', NULL, 'Samonte', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'uploads/admins/admin-1.png?v=1708842508', NULL, 2, 1, '2021-01-20 14:02:37', '2024-02-25 14:28:28'),
+(3, 'Admin', NULL, 'Juswa', 'juswa', '0192023a7bbd73250516f069df18b500', 'uploads/admins/admin-3.png?v=1708840534', NULL, 2, 1, '2024-01-31 17:50:11', '2024-02-25 13:55:34'),
+(4, 'Admin', NULL, 'Anne', 'Anne', '0192023a7bbd73250516f069df18b500', 'uploads/admins/admin-4.png?v=1708840550', NULL, 2, 1, '2024-01-31 17:51:11', '2024-02-25 13:55:50'),
+(5, 'Admin', NULL, 'Jade', 'Jade', '0192023a7bbd73250516f069df18b500', 'uploads/admins/admin-5.png?v=1708840559', NULL, 2, 1, '2024-01-31 17:51:28', '2024-02-25 13:55:59'),
+(7, 'Admin', NULL, 'Pablo', 'Pablo', '0192023a7bbd73250516f069df18b500', 'uploads/admins/admin-7.png?v=1708840568', NULL, 2, 1, '2024-01-31 17:53:02', '2024-02-25 13:56:08'),
+(8, 'christian ', NULL, 'samonte', 'sam', '332532dcfaa1cbf61e2a266bd723612c', 'uploads/admins/admin-8.png?v=1708840760', NULL, 2, 1, '2024-02-24 16:48:36', '2024-02-25 13:59:20');
 
 --
 -- Indexes for dumped tables
@@ -332,7 +340,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `archive_list`
 --
 ALTER TABLE `archive_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `curriculum_list`
@@ -350,7 +358,7 @@ ALTER TABLE `department_list`
 -- AUTO_INCREMENT for table `outsiders_list`
 --
 ALTER TABLE `outsiders_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `payment_list`
@@ -374,7 +382,7 @@ ALTER TABLE `system_info`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables

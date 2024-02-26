@@ -93,7 +93,7 @@
 	function delete_user($id){
 		start_loader();
 		$.ajax({
-			url:_base_url_+"classes/Users.php?f=delete_student",
+			url:_base_url_+"classes/Users.php?f=delete_outsider",
 			method:"POST",
 			data:{id: $id},
 			dataType:"json",
@@ -115,7 +115,7 @@
 	function verify_user($id){
 		start_loader();
 		$.ajax({
-			url:_base_url_+"classes/Users.php?f=verify_student",
+			url:_base_url_+"classes/Users.php?f=verify_outsider",
 			method:"POST",
 			data:{id: $id},
 			dataType:"json",

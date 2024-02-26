@@ -444,11 +444,37 @@ Class Users extends DBConnection {
 		}
 		return json_encode($resp);
 	}
+	public function delete_outsider(){
+		extract($_POST);
+		$avatar = $this->conn->query("SELECT avatar FROM outsiders_list where id = '{$id}'")->fetch_array()['avatar'];
+		$qry = $this->conn->query("DELETE FROM outsiders_list where id = $id");
+		if($qry){
+			$avatar = explode("?",$avatar)[0];
+			$this->settings->set_flashdata('success','Student User Details successfully deleted.');
+			if(is_file(base_app.$avatar))
+				unlink(base_app.$avatar);
+			$resp['status'] = 'success';
+		}else{
+			$resp['status'] = 'failed';
+		}
+		return json_encode($resp);
+	}
 	public function verify_student(){
 		extract($_POST);
 		$update = $this->conn->query("UPDATE `student_list` set `status` = 1 where id = $id");
 		if($update){
 			$this->settings->set_flashdata('success','Student Account has verified successfully.');
+			$resp['status'] = 'success';
+		}else{
+			$resp['status'] = 'failed';
+		}
+		return json_encode($resp);
+	}
+	public function verify_outsider(){
+		extract($_POST);
+		$update = $this->conn->query("UPDATE `outsiders_list` set `status` = 1 where id = $id");
+		if($update){
+			$this->settings->set_flashdata('success','Outsider Account has verified successfully.');
 			$resp['status'] = 'success';
 		}else{
 			$resp['status'] = 'failed';
@@ -479,9 +505,15 @@ $action = !isset($_GET['f']) ? 'none' : strtolower($_GET['f']);
         case 'delete_student':
             echo $users->delete_student();
             break;
+		case 'delete_outsider':
+			echo $users->delete_outsider();
+			break;
         case 'verify_student':
             echo $users->verify_student();
             break;
+		case 'verify_outsider':
+			echo $users->verify_outsider();
+			break;
 		case 'verify_payment':
 			echo $users->verify_payment();
 			break;
