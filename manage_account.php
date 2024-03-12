@@ -1,7 +1,7 @@
 <?php
 // Assuming your $conn and $_settings objects are defined somewhere before this code
 $student_user = $conn->query("SELECT s.*,d.name as department, c.name as curriculum,CONCAT(lastname,', ',firstname,' ',middlename) as fullname FROM student_list s inner join department_list d on s.department_id = d.id inner join curriculum_list c on s.curriculum_id = c.id where s.id ='{$_settings->userdata('id')}'");
-$outsider_user = $conn->query("SELECT s.*,d.name as department, c.name as curriculum,CONCAT(lastname,', ',firstname,' ',middlename) as fullname FROM outsiders_list s inner join department_list d on s.department_id = d.id inner join curriculum_list c on s.curriculum_id = c.id where s.id ='{$_settings->userdata('id')}'");
+$outsider_user = $conn->query("SELECT s.*,(lastname,', ',firstname,' ',middlename) as fullname FROM outsiders_list s where s.id ='{$_settings->userdata('id')}'");
 
 $user_data = [];
 
